@@ -19,6 +19,11 @@
     "gatsby-plugin-postcss": "^6.12.0",
     "postcss": "^8.4.31",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+		"@fortawesome/fontawesome-free": "^5.14.0",
+		"@fortawesome/fontawesome-svg-core": "^1.2.30",
+		"@fortawesome/free-solid-svg-icons": "^5.14.0",
+		"@fortawesome/react-fontawesome": "^0.1.11"
+
   }
 }
