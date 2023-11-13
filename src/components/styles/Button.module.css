@@ -4,8 +4,9 @@
 .Btn {
   border-radius: 2px;
   border: none;
-  box-shadow: 2px 2px 5px 0px #ccc;
+  box-shadow: 1px 4px 5px 0px var(--grey);
   font-size: 1.6rem;
+  cursor: pointer;
 }
 
 .Btn_lg {

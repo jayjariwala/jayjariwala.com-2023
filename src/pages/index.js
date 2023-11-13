@@ -43,7 +43,9 @@ const IndexPage = () => {
 							</p>
 						</div>
 						<div className={M6}>
-							<button className={`${Btn} ${Btn_primary} ${Btn_lg} `}>Get in Touch</button>
+							<button onClick="/about" className={`${Btn} ${Btn_primary} ${Btn_lg} `}>
+								Get in Touch
+							</button>
 							<button className={`${Btn} ${Btn_lg}`}>Resume</button>
 						</div>
 					</div>
