@@ -12,10 +12,11 @@ import {
 	WhoAmI,
 	SubIntro,
 	Section1,
+	Section2,
 	Technologies,
 	Card,
 	Round,
-} from 'components/styles/Hero.module.css';
+} from 'components/styles/Home.module.css';
 import { Medium } from 'components/styles/Container.module.css';
 import { Btn, Btn_primary, Btn_lg } from 'components/styles/Button.module.css';
 import { M6, M2 } from 'components/styles/Margin.module.css';
@@ -85,6 +86,16 @@ const IndexPage = () => {
 						My expertise spans designing and maintaining databases, implementing robust application logic, and ensuring seamless integration between
 						front-end and back-end components.
 					</p>
+				</div>
+			</div>
+			<div className={`${Section2}`}>
+				<div>
+					<p className={M2}>Contact me</p>
+					<h2>A full-width input field</h2>
+					<form>
+						<label for="fname">First Name</label>
+						<input type="text" id="fname" name="fname" />
+					</form>
 				</div>
 			</div>
 		</Layout>

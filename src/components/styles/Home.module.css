@@ -123,30 +123,12 @@
 }
 
 .Section2 {
-  position: relative;
-  margin-top: 10rem;
-  padding: 4rem 0;
-  background-color: var(--white);
-}
-
-.Section2OuterBox1 {
-  position: absolute;
-  z-index: -10;
-  width: 100%;
-  height: 6rem;
-  top: -3rem;
-  background-color: var(--purple-dark);
-  clip-path: polygon(100% 50%, 0 0, 0 100%);
-}
-
-.Section2OuterBox2 {
-  position: absolute;
-  z-index: -10;
-  width: 100%;
-  height: 6rem;
-  bottom: -3rem;
-  background-color: var(--purple-dark);
-  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    margin-top: 150px;
+    background: linear-gradient(var(--dark-sky), var(--squirtle));
+    /* clip-path: ellipse(70% 72% at 48% 27%); */
+    padding-top: 6rem;
+    color: var(--white);
+    border: none;
 }
 
 /* Homepage Responsiveness */
