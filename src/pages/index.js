@@ -16,9 +16,15 @@ import {
 	Technologies,
 	Card,
 	Round,
+	ContactCard,
+	ContactFormWrapper,
+	ContactFormHeading,
+	ContactForm,
+	ContactLabel,
+	InputType,
 } from 'components/styles/Home.module.css';
 import { Medium } from 'components/styles/Container.module.css';
-import { Btn, Btn_primary, Btn_lg } from 'components/styles/Button.module.css';
+import { Btn, Btn_primary, Btn_lg, Btn_sm } from 'components/styles/Button.module.css';
 import { M6, M2 } from 'components/styles/Margin.module.css';
 import avatar from 'assets/images/avatar1.jpg';
 
@@ -89,13 +95,19 @@ const IndexPage = () => {
 				</div>
 			</div>
 			<div className={`${Section2}`}>
-				<div>
-					<p className={M2}>Contact me</p>
-					<h2>A full-width input field</h2>
-					<form>
-						<label for="fname">First Name</label>
-						<input type="text" id="fname" name="fname" />
+				<div className={ContactCard}>
+					{/* <div className={ContactFormWrapper}> */}
+					<h3 className={ContactFormHeading}>Contact me</h3>
+					<form className={ContactForm}>
+						<label for="name">Name</label>
+						<input type="text" id="fname" name="fname" className={InputType} />
+						<label for="message">Message</label>
+						<textarea className={InputType} name="subject" placeholder="Write something.." />
+						<button onClick="/about" className={`${Btn} ${Btn_primary} ${Btn_sm} `}>
+							Send
+						</button>
 					</form>
+					{/* </div> */}
 				</div>
 			</div>
 		</Layout>

@@ -123,12 +123,43 @@
 }
 
 .Section2 {
-    margin-top: 150px;
-    background: linear-gradient(var(--dark-sky), var(--squirtle));
-    /* clip-path: ellipse(70% 72% at 48% 27%); */
-    padding-top: 6rem;
-    color: var(--white);
+    margin-top: 120px;
+    background: var(--squirtle);
+    padding: 30px 0rem;
     border: none;
+    clip-path: polygon(100% 2%, 100% 96%, 0 100%, 0 5%);
+}
+
+.ContactCard {
+  padding: 50px 0px;
+  background-color: var(--white);
+}
+
+.ContactFormWrapper {
+
+}
+
+.ContactFormWrapper {
+  padding: 25px;
+}
+.ContactFormHeading {
+  text-align: center;
+
+}
+.ContactForm {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.InputType {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
 /* Homepage Responsiveness */
