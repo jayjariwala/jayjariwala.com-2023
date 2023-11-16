@@ -7,6 +7,7 @@
   box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.19);
   font-size: 1.6rem;
   cursor: pointer;
+  font-family: sans-serif
 }
 
 .Btn_lg {
@@ -22,6 +23,20 @@
 .Btn_primary {
   background: var(--orange-blood);
   color: var(--white);
+}
+
+.ButtonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Link_btn {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
 }
 
 

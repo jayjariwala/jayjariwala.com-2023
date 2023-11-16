@@ -131,13 +131,10 @@
 }
 
 .ContactCard {
-  padding: 50px 0px;
+  padding: 100px 0px;
   background-color: var(--white);
 }
 
-.ContactFormWrapper {
-
-}
 
 .ContactFormWrapper {
   padding: 25px;

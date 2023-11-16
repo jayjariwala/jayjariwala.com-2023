@@ -17,16 +17,15 @@ import {
 	Card,
 	Round,
 	ContactCard,
-	ContactFormWrapper,
 	ContactFormHeading,
 	ContactForm,
-	ContactLabel,
 	InputType,
 } from 'components/styles/Home.module.css';
 import { Medium } from 'components/styles/Container.module.css';
-import { Btn, Btn_primary, Btn_lg, Btn_sm } from 'components/styles/Button.module.css';
+import { Btn, Btn_primary, Btn_lg, Btn_sm, Link_btn, ButtonGroup } from 'components/styles/Button.module.css';
 import { M6, M2 } from 'components/styles/Margin.module.css';
 import avatar from 'assets/images/avatar1.jpg';
+import { Link } from 'gatsby';
 
 const IndexPage = () => {
 	return (
@@ -49,10 +48,10 @@ const IndexPage = () => {
 								challenges, aiming to contribute to a tech-driven world that enhances and simplifies the human experience.
 							</p>
 						</div>
-						<div className={M6}>
-							<button onClick="/about" className={`${Btn} ${Btn_primary} ${Btn_lg} `}>
+						<div className={`${M6} ${ButtonGroup} `}>
+							<Link to="#contact-me" className={`${Btn} ${Btn_primary} ${Btn_lg} ${Link_btn} `}>
 								Get in Touch
-							</button>
+							</Link>
 							<button className={`${Btn} ${Btn_lg}`}>Resume</button>
 						</div>
 					</div>
@@ -96,18 +95,18 @@ const IndexPage = () => {
 			</div>
 			<div className={`${Section2}`}>
 				<div className={ContactCard}>
-					{/* <div className={ContactFormWrapper}> */}
-					<h3 className={ContactFormHeading}>Contact me</h3>
+					<h3 className={ContactFormHeading} id="contact-me">
+						Contact me
+					</h3>
 					<form className={ContactForm}>
-						<label for="name">Name</label>
-						<input type="text" id="fname" name="fname" className={InputType} />
-						<label for="message">Message</label>
-						<textarea className={InputType} name="subject" placeholder="Write something.." />
+						<label htmlfor="name">Name</label>
+						<input type="text" id="name" name="name" className={InputType} />
+						<label htmlfor="message">Message</label>
+						<textarea className={InputType} name="message" id="message" placeholder="Write something.." />
 						<button onClick="/about" className={`${Btn} ${Btn_primary} ${Btn_sm} `}>
 							Send
 						</button>
 					</form>
-					{/* </div> */}
 				</div>
 			</div>
 		</Layout>
