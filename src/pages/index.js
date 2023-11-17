@@ -98,12 +98,14 @@ const IndexPage = () => {
 					<h3 className={ContactFormHeading} id="contact-me">
 						Contact me
 					</h3>
-					<form className={ContactForm}>
+					<form method="post" action="https://getform.io/f/62a7def0-d14f-4596-bc6d-ab3d746e4080" className={ContactForm}>
 						<label htmlfor="name">Name</label>
 						<input type="text" id="name" name="name" className={InputType} />
+						<label htmlfor="email">Email</label>
+						<input type="email" id="email" name="email" className={InputType} />
 						<label htmlfor="message">Message</label>
-						<textarea className={InputType} name="message" id="message" placeholder="Write something.." />
-						<button onClick="/about" className={`${Btn} ${Btn_primary} ${Btn_sm} `}>
+						<textarea rows={10} className={InputType} name="message" id="message" placeholder="Write something.." />
+						<button type="submit" className={`${Btn} ${Btn_primary} ${Btn_sm} `}>
 							Send
 						</button>
 					</form>
