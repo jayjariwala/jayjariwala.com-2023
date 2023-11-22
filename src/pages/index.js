@@ -99,11 +99,11 @@ const IndexPage = () => {
 						Contact me
 					</h3>
 					<form method="post" action="https://getform.io/f/62a7def0-d14f-4596-bc6d-ab3d746e4080" className={ContactForm}>
-						<label htmlfor="name">Name</label>
+						<label htmlFor="name">Name</label>
 						<input type="text" id="name" name="name" className={InputType} />
-						<label htmlfor="email">Email</label>
+						<label htmlFor="email">Email</label>
 						<input type="email" id="email" name="email" className={InputType} />
-						<label htmlfor="message">Message</label>
+						<label htmlFor="message">Message</label>
 						<textarea rows={10} className={InputType} name="message" id="message" placeholder="Write something.." />
 						<button type="submit" className={`${Btn} ${Btn_primary} ${Btn_sm} `}>
 							Send

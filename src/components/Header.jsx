@@ -1,13 +1,16 @@
-import React from "react"
-import { Nav, navLinks, Logo, Underline, mobileNav } from "./styles/Navbar.module.css"
+import React, {useState} from "react"
+import { Nav, navLinks, Logo, Underline, mobileNav, visible, hidden , closeIcon} from "./styles/Navbar.module.css"
 import { Large } from "./styles/Container.module.css"
 import logo from "../assets/images/brand.png"
 import mobileLogo from "../assets/images/mobile-logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faWindowClose } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 
+
 const Header = props => {
+   const [isMenuVisible, setIsMenuVisible] = useState(true);
+
   return (
     <nav className={ Nav }>
       <div className={ Large }>
@@ -18,15 +21,18 @@ const Header = props => {
           <div className={mobileNav}>
             <Link to="#">
               <img
-                src={mobileLogo}
-                width="90px"
+                src={logo}
+                width="60px"
                 className={mobileLogo}
                 alt="Jay Jariwala portfolio logo"
               />
             </Link>
-            <FontAwesomeIcon icon={faBars} size="2x" />
+            <div onClick={() => setIsMenuVisible(toggle => !toggle)}>
+            {isMenuVisible ? <FontAwesomeIcon icon={faWindowClose} size="2x" className={closeIcon}/> : <FontAwesomeIcon icon={faBars} size="2x"/>}
+
+            </div>
           </div>
-          <ul>
+          <ul className={isMenuVisible ? visible : hidden }>
             <li>
               <Link to="/abc" className={`${Underline}`}>
                 Home
