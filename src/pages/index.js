@@ -24,7 +24,7 @@ import {
 import { Medium } from 'components/styles/Container.module.css';
 import { Btn, Btn_primary, Btn_lg, Btn_sm, Link_btn, ButtonGroup } from 'components/styles/Button.module.css';
 import { M6, M2 } from 'components/styles/Margin.module.css';
-import avatar from 'assets/images/avatar1.jpg';
+import avatar from 'assets/images/avatar2.jpg';
 import { Link } from 'gatsby';
 
 const IndexPage = () => {
@@ -33,7 +33,7 @@ const IndexPage = () => {
 			<div className={Hero}>
 				<div className={Overlay}></div>
 				<div className={`${Medium} ${introSection} text-center`}>
-					<img className={Avatar} src={avatar} width="200px" height="200px" alt="avatar logo" />
+					<img className={Avatar} src={avatar} alt="avatar logo" />
 					<div className={Introduction}>
 						<p className={Hi}>Hello there!</p>
 						<h1 className={WhoAmI}>
