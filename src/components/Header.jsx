@@ -53,6 +53,11 @@ const Header = props => {
                 Blog
               </Link>
             </li> */}
+            <li>
+              <Link to="#contact-me" className={`${Underline}`}>
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
