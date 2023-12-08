@@ -34,16 +34,16 @@ const Header = props => {
           </div>
           <ul className={isMenuVisible ? visible : hidden }>
             <li>
-              <Link to="/abc" className={`${Underline}`}>
+              <Link to="/index" className={`${Underline}`}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="#" className={`${Underline}`}>
+              <Link to="/work" className={`${Underline}`}>
                 Work
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="#" className={`${Underline}`}>
                 Certifications
               </Link>
@@ -52,7 +52,7 @@ const Header = props => {
               <Link to="#" className={`${Underline}`}>
                 Blog
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
