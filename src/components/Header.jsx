@@ -34,7 +34,7 @@ const Header = props => {
           </div>
           <ul className={isMenuVisible ? visible : hidden }>
             <li>
-              <Link to="/index" className={`${Underline}`}>
+              <Link to="/" className={`${Underline}`}>
                 Home
               </Link>
             </li>
