@@ -13,6 +13,7 @@ import {
 	SubIntro,
 	Section1,
 	Section2,
+	Section3,
 	Technologies,
 	Card,
 	Round,
@@ -93,7 +94,14 @@ const IndexPage = () => {
 					</p>
 				</div>
 			</div>
-			<div className={`${Section2}`}>
+			<div className={Section2}>
+				<h2>Work Experience</h2>
+				<div className="">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div className={`${Section3}`}>
 				<div className={ContactCard}>
 					<h3 className={ContactFormHeading} id="contact-me">
 						Contact me

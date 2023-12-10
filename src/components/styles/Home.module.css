@@ -127,6 +127,14 @@
 }
 
 .Section2 {
+  background: linear-gradient(var(--squirtle), var(--dark-sky));
+  margin-top: 120px;
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+}
+
+.Section3 {
     margin-top: 120px;
     background: var(--squirtle);
     padding: 30px 0rem;
