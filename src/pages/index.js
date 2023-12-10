@@ -27,7 +27,14 @@ import { btn, btnPrimary, btnLg, btnSm, linkBtn, buttonGroup } from 'components/
 import { M6, M2 } from 'components/styles/Margin.module.css';
 import avatarImg from 'assets/images/avatar2.jpg';
 import { Link } from 'gatsby';
-import Button from '@mui/material/Button';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import Typography from '@mui/material/Typography';
+
 const IndexPage = () => {
 	return (
 		<Layout>
@@ -97,10 +104,35 @@ const IndexPage = () => {
 			<div className={section2}>
 				<h2>Work Experience</h2>
 				<div className="">
-					<div>
-						<Button variant="contained">Hello world</Button>
-					</div>
 					<div></div>
+					<div>
+						<Timeline>
+							<TimelineItem>
+								<TimelineSeparator>
+									<TimelineDot />
+									<TimelineConnector />
+								</TimelineSeparator>
+								<TimelineContent>
+									<Typography variant="h4" component="span">
+										2021 - Current
+									</Typography>
+								</TimelineContent>
+							</TimelineItem>
+							<TimelineItem>
+								<TimelineSeparator>
+									<TimelineDot />
+									<TimelineConnector />
+								</TimelineSeparator>
+								<TimelineContent>Code</TimelineContent>
+							</TimelineItem>
+							<TimelineItem>
+								<TimelineSeparator>
+									<TimelineDot />
+								</TimelineSeparator>
+								<TimelineContent>Sleep</TimelineContent>
+							</TimelineItem>
+						</Timeline>
+					</div>
 				</div>
 			</div>
 			<div className={`${section3}`}>
