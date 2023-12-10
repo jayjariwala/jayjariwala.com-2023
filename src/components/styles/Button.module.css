@@ -1,7 +1,7 @@
 @value breakpoints: "./breakpoint.css";
 @value largest, small, medium from breakpoints;
 
-.Btn {
+.btn {
   border-radius: 2px;
   border: none;
   box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.19);
@@ -10,28 +10,28 @@
   font-family: sans-serif
 }
 
-.Btn_lg {
+.btn-lg {
   height: 35px;
   min-width: 250px;
 }
 
-.Btn_sm {
+.btn-sm {
   height: 35px;
   min-width: 80px;
 }
 
-.Btn_primary {
+.btn-primary {
   background: var(--orange-blood);
   color: var(--white);
 }
 
-.ButtonGroup {
+.buttonGroup {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.Link_btn {
+.link-btn {
   display: flex;
   text-decoration: none;
   text-transform: uppercase;
@@ -41,14 +41,14 @@
 
 
 @media only screen and (max-width: medium) {
-  .Btn_lg {
+  .btn-lg {
     height: 30px;
     min-width: 200px;
   }
 }
 
 @media only screen and (max-width: small) {
-  .Btn_lg {
+  .btn-lg {
     height: 25px;
     min-width: 150px;
   }
