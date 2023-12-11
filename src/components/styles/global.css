@@ -17,6 +17,8 @@
   --squirtle:#558DCA;
   --sky-blue:#96FFFF;
   --white-grey:#C8EFF9;
+  --font-heading: "roboto", sans-serif;
+  --font-content: "Open Sans", sans-serif;
 }
 
 * {

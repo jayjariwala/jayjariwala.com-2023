@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Layout } from '../components/layouts';
+import { Layout } from 'components/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGem, faPaintBrush, faDatabase } from '@fortawesome/free-solid-svg-icons';
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import {
 	hero,
 	overlay,
@@ -20,12 +21,14 @@ import {
 	contactCard,
 	contactFormHeading,
 	contactForm,
+	workWrapper,
 	inputType,
 } from 'components/styles/Home.module.css';
 import { medium } from 'components/styles/Container.module.css';
 import { btn, btnPrimary, btnLg, btnSm, linkBtn, buttonGroup } from 'components/styles/Button.module.css';
 import { M6, M2 } from 'components/styles/Margin.module.css';
 import avatarImg from 'assets/images/avatar2.jpg';
+import cvsImg from 'assets/images/cvs.png';
 import { Link } from 'gatsby';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -103,33 +106,62 @@ const IndexPage = () => {
 			</div>
 			<div className={section2}>
 				<h2>Work Experience</h2>
-				<div className="">
-					<div></div>
-					<div>
-						<Timeline>
+				<div className={workWrapper}>
+					<div className="">
+						<h3>Core Technologies</h3>
+						<ul>
+							<li>
+								<b>Programming Languages:</b>
+								<span>JavaScript, TypeScript, Java </span>
+							</li>
+							<li>
+								<b>Web Frameworks:</b>
+								<span>ReactJs, Angular.js, jQuery</span>
+							</li>
+							<li>
+								<b>Databases:</b>
+								<span> Postgres, MySQL, MongoDB, Oracle</span>
+							</li>
+							<li>
+								<b>Cloud:</b>
+								<span>Google Cloud Platform - Kubernetes, Compute Engine, Cloud Functions, Cloud Run etc.</span>
+							</li>
+							<li>
+								<b>Tools & Technologies:</b>
+								<span>Kafka, Docker, CircleCI, Harness, Jenkins, Github, VSCode </span>
+							</li>
+							<li>
+								<b>Testing:</b>
+								<span>Jasmine, Karma, Cypress, React Testing library, jUnit</span>
+							</li>
+						</ul>
+					</div>
+					<div className="">
+						<Timeline position="alternate">
 							<TimelineItem>
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="right" variant="body2" color="text.secondary">
+									9:30 am
+								</TimelineOppositeContent>
 								<TimelineSeparator>
-									<TimelineDot />
+									<TimelineConnector />
+									<TimelineDot>
+										<img src={cvsImg} width={20} />
+									</TimelineDot>
 									<TimelineConnector />
 								</TimelineSeparator>
-								<TimelineContent>
-									<Typography variant="h4" component="span">
-										2021 - Current
-									</Typography>
+								<TimelineContent sx={{ py: '12px', px: 2 }}>
+									<p>
+										<Typography variant="h5" component="span">
+											CVS Health
+										</Typography>
+									</p>
+									<p>
+										<Typography variant="h6" component="span">
+											Software Engineer
+										</Typography>
+									</p>
+									<Typography>Because you need strength</Typography>
 								</TimelineContent>
-							</TimelineItem>
-							<TimelineItem>
-								<TimelineSeparator>
-									<TimelineDot />
-									<TimelineConnector />
-								</TimelineSeparator>
-								<TimelineContent>Code</TimelineContent>
-							</TimelineItem>
-							<TimelineItem>
-								<TimelineSeparator>
-									<TimelineDot />
-								</TimelineSeparator>
-								<TimelineContent>Sleep</TimelineContent>
 							</TimelineItem>
 						</Timeline>
 					</div>

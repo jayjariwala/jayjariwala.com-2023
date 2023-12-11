@@ -134,6 +134,16 @@
   text-align: center;
 }
 
+.workWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctSection {
+
+}
+
 .section3 {
     margin-top: 120px;
     background: var(--squirtle);
