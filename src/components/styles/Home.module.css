@@ -134,15 +134,47 @@
   text-align: center;
 }
 
+
 .workWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 40px;
 }
 
-.ctSection {
-
+.technologyWrapper {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  justify-content: right;
 }
+
+.technologyWrapper .heading {
+  color: var(--sky-blue);
+  margin-right: 5px;
+}
+
+.technologyWrapper ul {
+  margin-top: 10px;
+  list-style: none;
+  text-align: left;
+  max-width: 600px;
+}
+
+.technologyWrapper ul li{
+  margin-top: 10px;
+}
+
+.timelineWrapper {
+  align-self: flex-start;
+  height: 100%;
+  min-width: 400px;
+    flex: 1;
+      text-align: left;
+      display: flex;
+}
+
+
 
 .section3 {
     margin-top: 120px;

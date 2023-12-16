@@ -2,28 +2,8 @@ import * as React from 'react';
 import { Layout } from 'components/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGem, faPaintBrush, faDatabase } from '@fortawesome/free-solid-svg-icons';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import {
-	hero,
-	overlay,
-	avatar,
-	introSection,
-	introduction,
-	hi,
-	whoAmI,
-	subIntro,
-	section1,
-	section2,
-	section3,
-	technologies,
-	card,
-	round,
-	contactCard,
-	contactFormHeading,
-	contactForm,
-	workWrapper,
-	inputType,
-} from 'components/styles/Home.module.css';
+import TimelineOppositeContent, { timelineOppositeContentClasses } from '@mui/lab/TimelineOppositeContent';
+import * as styles from 'components/styles/Home.module.css';
 import { medium } from 'components/styles/Container.module.css';
 import { btn, btnPrimary, btnLg, btnSm, linkBtn, buttonGroup } from 'components/styles/Button.module.css';
 import { M6, M2 } from 'components/styles/Margin.module.css';
@@ -41,17 +21,17 @@ import Typography from '@mui/material/Typography';
 const IndexPage = () => {
 	return (
 		<Layout>
-			<div className={hero}>
-				<div className={overlay}></div>
-				<div className={`${medium} ${introSection} text-center`}>
-					<img className={avatar} src={avatarImg} alt="avatar logo" />
-					<div className={introduction}>
-						<p className={hi}>Hello there!</p>
-						<h1 className={whoAmI}>
+			<div className={styles.hero}>
+				<div className={styles.overlay}></div>
+				<div className={`${medium} ${styles.introSection} text-center`}>
+					<img className={styles.avatar} src={avatarImg} alt="avatar logo" />
+					<div className={styles.introduction}>
+						<p className={styles.hi}>Hello there!</p>
+						<h1 className={styles.whoAmI}>
 							I am Jay Jariwala. Full Stack JavaScript Developer with passion for {''}
 							<span className="highlight">Design</span>
 						</h1>
-						<div className={subIntro}>
+						<div className={styles.subIntro}>
 							<p>
 								As a tech enthusiast and software engineer, my passion lies in leveraging cutting-edge technology to create solutions that positively
 								impact on people's lives. With expertise in healthcare technology, I currently serve as a full stack software engineer at CVS health,
@@ -68,13 +48,13 @@ const IndexPage = () => {
 					</div>
 				</div>
 			</div>
-			<div className={`${section1} `}>
+			<div className={`${styles.section1} `}>
 				<h2>I love working with cutting edge technolgies</h2>
 				<p className={M2}>Things I am good at...</p>
 			</div>
-			<div className={`${technologies} ${medium}`}>
-				<div className={card}>
-					<div className={round}>
+			<div className={`${styles.technologies} ${medium}`}>
+				<div className={styles.card}>
+					<div className={styles.round}>
 						<FontAwesomeIcon icon={faGem} size="2x" />
 					</div>
 					<h3>UI Design</h3>
@@ -83,8 +63,8 @@ const IndexPage = () => {
 						convert them into high-fidelity prototype
 					</p>
 				</div>
-				<div className={card}>
-					<div className={round}>
+				<div className={styles.card}>
+					<div className={styles.round}>
 						<FontAwesomeIcon icon={faPaintBrush} size="2x" />
 					</div>
 					<h3>Frontend Development</h3>
@@ -93,8 +73,8 @@ const IndexPage = () => {
 						Application frontend using React and Angular
 					</p>
 				</div>
-				<div className={card}>
-					<div className={round}>
+				<div className={styles.card}>
+					<div className={styles.round}>
 						<FontAwesomeIcon icon={faDatabase} size="2x" />
 					</div>
 					<h3>Backend Development</h3>
@@ -104,43 +84,51 @@ const IndexPage = () => {
 					</p>
 				</div>
 			</div>
-			<div className={section2}>
-				<h2>Work Experience</h2>
-				<div className={workWrapper}>
-					<div className="">
-						<h3>Core Technologies</h3>
-						<ul>
-							<li>
-								<b>Programming Languages:</b>
-								<span>JavaScript, TypeScript, Java </span>
-							</li>
-							<li>
-								<b>Web Frameworks:</b>
-								<span>ReactJs, Angular.js, jQuery</span>
-							</li>
-							<li>
-								<b>Databases:</b>
-								<span> Postgres, MySQL, MongoDB, Oracle</span>
-							</li>
-							<li>
-								<b>Cloud:</b>
-								<span>Google Cloud Platform - Kubernetes, Compute Engine, Cloud Functions, Cloud Run etc.</span>
-							</li>
-							<li>
-								<b>Tools & Technologies:</b>
-								<span>Kafka, Docker, CircleCI, Harness, Jenkins, Github, VSCode </span>
-							</li>
-							<li>
-								<b>Testing:</b>
-								<span>Jasmine, Karma, Cypress, React Testing library, jUnit</span>
-							</li>
-						</ul>
+			<div className={styles.section2}>
+				<h2 className={styles.title}>Work Experience</h2>
+				<div className={styles.workWrapper}>
+					<div className={styles.technologyWrapper}>
+						<div>
+							<h3>Core Technologies</h3>
+							<ul>
+								<li>
+									<span className={styles.heading}>Programming Languages:</span>
+									<span>JavaScript, TypeScript, Java </span>
+								</li>
+								<li>
+									<span className={styles.heading}>Web Frameworks:</span>
+									<span>ReactJs, Angular.js, jQuery</span>
+								</li>
+								<li>
+									<span className={styles.heading}>Databases:</span>
+									<span> Postgres, MySQL, MongoDB, Oracle</span>
+								</li>
+								<li>
+									<span className={styles.heading}>Cloud:</span>
+									<span>Google Cloud Platform - Kubernetes, Compute Engine, Cloud Functions, Cloud Run etc.</span>
+								</li>
+								<li>
+									<span className={styles.heading}>Tools & Technologies:</span>
+									<span>Kafka, Docker, CircleCI, Harness, Jenkins, Github, VSCode </span>
+								</li>
+								<li>
+									<span className={styles.heading}>Testing:</span>
+									<span>Jasmine, Karma, Cypress, React Testing library, jUnit</span>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div className="">
-						<Timeline position="alternate">
+					<div className={styles.timelineWrapper}>
+						<Timeline
+							sx={{
+								[`& .${timelineOppositeContentClasses.root}`]: {
+									flex: 0.2,
+								},
+							}}
+						>
 							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="right" variant="body2" color="text.secondary">
-									9:30 am
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2" color="text.secondary">
+									<h3>Oct 2020</h3>
 								</TimelineOppositeContent>
 								<TimelineSeparator>
 									<TimelineConnector />
@@ -151,14 +139,94 @@ const IndexPage = () => {
 								</TimelineSeparator>
 								<TimelineContent sx={{ py: '12px', px: 2 }}>
 									<p>
-										<Typography variant="h5" component="span">
-											CVS Health
-										</Typography>
+										<h3>CVS Health</h3>
 									</p>
 									<p>
-										<Typography variant="h6" component="span">
-											Software Engineer
-										</Typography>
+										<h4>Software Engineer</h4>
+									</p>
+									<Typography>Because you need strength</Typography>
+								</TimelineContent>
+							</TimelineItem>
+							<TimelineItem>
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2" color="text.secondary">
+									<h3>Oct 2020</h3>
+								</TimelineOppositeContent>
+								<TimelineSeparator>
+									<TimelineConnector />
+									<TimelineDot>
+										<img src={cvsImg} width={20} />
+									</TimelineDot>
+									<TimelineConnector />
+								</TimelineSeparator>
+								<TimelineContent sx={{ py: '12px', px: 2 }}>
+									<p>
+										<h3>CVS Health</h3>
+									</p>
+									<p>
+										<h4>Software Engineer</h4>
+									</p>
+									<Typography>Because you need strength</Typography>
+								</TimelineContent>
+							</TimelineItem>
+							<TimelineItem>
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2" color="text.secondary">
+									<h3>Oct 2020</h3>
+								</TimelineOppositeContent>
+								<TimelineSeparator>
+									<TimelineConnector />
+									<TimelineDot>
+										<img src={cvsImg} width={20} />
+									</TimelineDot>
+									<TimelineConnector />
+								</TimelineSeparator>
+								<TimelineContent sx={{ py: '12px', px: 2 }}>
+									<p>
+										<h3>CVS Health</h3>
+									</p>
+									<p>
+										<h4>Software Engineer</h4>
+									</p>
+									<Typography>Because you need strength</Typography>
+								</TimelineContent>
+							</TimelineItem>
+							<TimelineItem>
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2" color="text.secondary">
+									<h3>Oct 2020</h3>
+								</TimelineOppositeContent>
+								<TimelineSeparator>
+									<TimelineConnector />
+									<TimelineDot>
+										<img src={cvsImg} width={20} />
+									</TimelineDot>
+									<TimelineConnector />
+								</TimelineSeparator>
+								<TimelineContent sx={{ py: '12px', px: 2 }}>
+									<p>
+										<h3>CVS Health</h3>
+									</p>
+									<p>
+										<h4>Software Engineer</h4>
+									</p>
+									<Typography>Because you need strength</Typography>
+								</TimelineContent>
+							</TimelineItem>
+							<TimelineItem>
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2" color="text.secondary">
+									<h3>Oct 2020</h3>
+								</TimelineOppositeContent>
+								<TimelineSeparator>
+									<TimelineConnector />
+									<TimelineDot>
+										<img src={cvsImg} width={20} />
+									</TimelineDot>
+									<TimelineConnector />
+								</TimelineSeparator>
+								<TimelineContent sx={{ py: '12px', px: 2 }}>
+									<p>
+										<h3>CVS Health</h3>
+									</p>
+									<p>
+										<h4>Software Engineer</h4>
 									</p>
 									<Typography>Because you need strength</Typography>
 								</TimelineContent>
@@ -167,18 +235,18 @@ const IndexPage = () => {
 					</div>
 				</div>
 			</div>
-			<div className={`${section3}`}>
-				<div className={contactCard}>
-					<h3 className={contactFormHeading} id="contact-me">
+			<div className={`${styles.section3}`}>
+				<div className={styles.contactCard}>
+					<h3 className={styles.contactFormHeading} id="contact-me">
 						Contact me
 					</h3>
-					<form method="post" action="https://getform.io/f/62a7def0-d14f-4596-bc6d-ab3d746e4080" className={contactForm}>
+					<form method="post" action="https://getform.io/f/62a7def0-d14f-4596-bc6d-ab3d746e4080" className={styles.contactForm}>
 						<label htmlFor="name">Name</label>
-						<input type="text" id="name" name="name" className={inputType} />
+						<input type="text" id="name" name="name" className={styles.inputType} />
 						<label htmlFor="email">Email</label>
-						<input type="email" id="email" name="email" className={inputType} />
+						<input type="email" id="email" name="email" className={styles.inputType} />
 						<label htmlFor="message">Message</label>
-						<textarea rows={10} className={inputType} name="message" id="message" placeholder="Write something.." />
+						<textarea rows={10} className={styles.inputType} name="message" id="message" placeholder="Write something.." />
 						<button type="submit" className={`${btn} ${btnPrimary} ${btnSm} `}>
 							Send
 						</button>
