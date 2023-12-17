@@ -9,6 +9,10 @@ import { btn, btnPrimary, btnLg, btnSm, linkBtn, buttonGroup } from 'components/
 import { M6, M2 } from 'components/styles/Margin.module.css';
 import avatarImg from 'assets/images/avatar2.jpg';
 import cvsImg from 'assets/images/cvs.png';
+import fduImg from 'assets/images/fdu_logo.png';
+import sdiImg from 'assets/images/sdi_logo.webp';
+import tausightImg from 'assets/images/tausight_logo.jpeg';
+import tbsmoImg from 'assets/images/tbsmo_logo.jpeg';
 import { Link } from 'gatsby';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -116,6 +120,9 @@ const IndexPage = () => {
 									<span>Jasmine, Karma, Cypress, React Testing library, jUnit</span>
 								</li>
 							</ul>
+							<button to="www.linkedin.com" className={`${btn} ${btnPrimary} ${btnSm} `}>
+								View On LinkedIn
+							</button>
 						</div>
 					</div>
 					<div className={styles.timelineWrapper}>
@@ -127,108 +134,105 @@ const IndexPage = () => {
 							}}
 						>
 							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2" color="text.secondary">
-									<h3>Oct 2020</h3>
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+									<h4>2022</h4>
 								</TimelineOppositeContent>
 								<TimelineSeparator>
-									<TimelineConnector />
-									<TimelineDot>
-										<img src={cvsImg} width={20} />
+									<TimelineConnector sx={{ height: '20px' }} />
+									<TimelineDot sx={{ borderWidth: '10px' }}>
+										<img src={cvsImg} width={30} />
 									</TimelineDot>
-									<TimelineConnector />
+									<TimelineConnector sx={{ height: '20px' }} />
 								</TimelineSeparator>
 								<TimelineContent sx={{ py: '12px', px: 2 }}>
-									<p>
-										<h3>CVS Health</h3>
-									</p>
-									<p>
-										<h4>Software Engineer</h4>
-									</p>
-									<Typography>Because you need strength</Typography>
+									<h3>CVS Health</h3>
+									<h4>Software Engineer</h4>
+									<span className={styles.timerange}>Oct 2022 - Present</span>
 								</TimelineContent>
 							</TimelineItem>
 							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2" color="text.secondary">
-									<h3>Oct 2020</h3>
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+									<h4>2020</h4>
 								</TimelineOppositeContent>
 								<TimelineSeparator>
-									<TimelineConnector />
-									<TimelineDot>
-										<img src={cvsImg} width={20} />
+									<TimelineConnector sx={{ height: '20px' }} />
+									<TimelineDot sx={{ borderWidth: '10px' }}>
+										<img src={tausightImg} width={30} />
 									</TimelineDot>
-									<TimelineConnector />
+									<TimelineConnector sx={{ height: '20px' }} />
 								</TimelineSeparator>
 								<TimelineContent sx={{ py: '12px', px: 2 }}>
-									<p>
-										<h3>CVS Health</h3>
-									</p>
-									<p>
-										<h4>Software Engineer</h4>
-									</p>
-									<Typography>Because you need strength</Typography>
+									<h3>Tausight</h3>
+									<h4>User Interface Engineer</h4>
+									<span className={styles.timerange}>Oct 2020 - Sept 2022</span>
 								</TimelineContent>
 							</TimelineItem>
 							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2" color="text.secondary">
-									<h3>Oct 2020</h3>
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+									<h4>2019</h4>
 								</TimelineOppositeContent>
 								<TimelineSeparator>
-									<TimelineConnector />
-									<TimelineDot>
-										<img src={cvsImg} width={20} />
+									<TimelineConnector sx={{ height: '20px' }} />
+									<TimelineDot sx={{ borderWidth: '10px' }}>
+										<img src={sdiImg} width={30} />
 									</TimelineDot>
-									<TimelineConnector />
+									<TimelineConnector sx={{ height: '20px' }} />
 								</TimelineSeparator>
 								<TimelineContent sx={{ py: '12px', px: 2 }}>
-									<p>
-										<h3>CVS Health</h3>
-									</p>
-									<p>
-										<h4>Software Engineer</h4>
-									</p>
-									<Typography>Because you need strength</Typography>
+									<h3>SDI Global Services</h3>
+									<h4>Software Developer</h4>
+									<span className={styles.timerange}>2019 - 2020</span>
 								</TimelineContent>
 							</TimelineItem>
 							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2" color="text.secondary">
-									<h3>Oct 2020</h3>
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+									<h4>2017</h4>
 								</TimelineOppositeContent>
 								<TimelineSeparator>
-									<TimelineConnector />
-									<TimelineDot>
-										<img src={cvsImg} width={20} />
+									<TimelineConnector sx={{ height: '20px' }} />
+									<TimelineDot sx={{ borderWidth: '10px' }}>
+										<img src={sdiImg} width={30} />
 									</TimelineDot>
-									<TimelineConnector />
+									<TimelineConnector sx={{ height: '20px' }} />
 								</TimelineSeparator>
 								<TimelineContent sx={{ py: '12px', px: 2 }}>
-									<p>
-										<h3>CVS Health</h3>
-									</p>
-									<p>
-										<h4>Software Engineer</h4>
-									</p>
-									<Typography>Because you need strength</Typography>
+									<h3>SDI Global Services</h3>
+									<h4>Software Developer</h4>
+									<span className={styles.timerange}>2017 - 2018</span>
 								</TimelineContent>
 							</TimelineItem>
 							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2" color="text.secondary">
-									<h3>Oct 2020</h3>
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+									<h4>2016</h4>
 								</TimelineOppositeContent>
 								<TimelineSeparator>
-									<TimelineConnector />
-									<TimelineDot>
-										<img src={cvsImg} width={20} />
+									<TimelineConnector sx={{ height: '20px' }} />
+									<TimelineDot sx={{ borderWidth: '10px' }}>
+										<img src={tbsmoImg} width={30} />
 									</TimelineDot>
-									<TimelineConnector />
+									<TimelineConnector sx={{ height: '20px' }} />
 								</TimelineSeparator>
 								<TimelineContent sx={{ py: '12px', px: 2 }}>
-									<p>
-										<h3>CVS Health</h3>
-									</p>
-									<p>
-										<h4>Software Engineer</h4>
-									</p>
-									<Typography>Because you need strength</Typography>
+									<h3>Today's Business</h3>
+									<h4>Web Development Intern</h4>
+									<span className={styles.timerange}>Aug 2016 - Dec 2016</span>
+								</TimelineContent>
+							</TimelineItem>
+							<TimelineItem>
+								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+									<h4>2015</h4>
+								</TimelineOppositeContent>
+								<TimelineSeparator>
+									<TimelineConnector sx={{ height: '20px' }} />
+									<TimelineDot sx={{ borderWidth: '10px' }}>
+										<img src={fduImg} width={30} />
+									</TimelineDot>
+								</TimelineSeparator>
+								<TimelineContent sx={{ py: '12px', px: 2 }}>
+									<h3>Fairleigh Dickinson University</h3>
+
+									<h4>Student Orientation Leader</h4>
+									<span className={styles.timerange}>Aug 2016 - Sept 2016</span>
 								</TimelineContent>
 							</TimelineItem>
 						</Timeline>

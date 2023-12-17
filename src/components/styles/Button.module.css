@@ -7,7 +7,8 @@
   box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.19);
   font-size: 1.6rem;
   cursor: pointer;
-  font-family: sans-serif
+  font-family: var(--font-content);
+  padding: 5px
 }
 
 .btn-lg {

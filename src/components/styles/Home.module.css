@@ -147,6 +147,7 @@
   text-align: left;
   display: flex;
   justify-content: right;
+  align-self: flex-start;
 }
 
 .technologyWrapper .heading {
@@ -159,6 +160,7 @@
   list-style: none;
   text-align: left;
   max-width: 600px;
+  margin-bottom: 30px;
 }
 
 .technologyWrapper ul li{
@@ -172,6 +174,12 @@
     flex: 1;
       text-align: left;
       display: flex;
+}
+
+.timerange  {
+  /* font-size: var(--); */
+  font-size: 1.8rem;
+  font-family: var(--font-content);
 }
 
 
