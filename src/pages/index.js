@@ -5,13 +5,14 @@ import { faGem, faPaintBrush, faDatabase } from '@fortawesome/free-solid-svg-ico
 import TimelineOppositeContent, { timelineOppositeContentClasses } from '@mui/lab/TimelineOppositeContent';
 import * as styles from 'components/styles/Home.module.css';
 import { medium } from 'components/styles/Container.module.css';
-import { btn, btnPrimary, btnLg, btnSm, linkBtn, buttonGroup } from 'components/styles/Button.module.css';
+import { btn, btnPrimary, btnSecondary, btnLg, btnSm, linkBtn, buttonGroup } from 'components/styles/Button.module.css';
 import { M6, M2 } from 'components/styles/Margin.module.css';
 import avatarImg from 'assets/images/avatar2.jpg';
 import cvsImg from 'assets/images/cvs.png';
 import fduImg from 'assets/images/fdu_logo.png';
 import sdiImg from 'assets/images/sdi_logo.webp';
 import tausightImg from 'assets/images/tausight_logo.jpeg';
+import gtuImg from 'assets/images/gtuLogo.jpeg';
 import tbsmoImg from 'assets/images/tbsmo_logo.jpeg';
 import { Link } from 'gatsby';
 import Timeline from '@mui/lab/Timeline';
@@ -20,7 +21,6 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import Typography from '@mui/material/Typography';
 
 const IndexPage = () => {
 	return (
@@ -31,10 +31,7 @@ const IndexPage = () => {
 					<img className={styles.avatar} src={avatarImg} alt="avatar logo" />
 					<div className={styles.introduction}>
 						<p className={styles.hi}>Hello there!</p>
-						<h1 className={styles.whoAmI}>
-							I am Jay Jariwala. Full Stack JavaScript Developer with passion for {''}
-							<span className="highlight">Design</span>
-						</h1>
+						<h1 className={styles.whoAmI}>I am Jay Jariwala. Full Stack JavaScript Developer</h1>
 						<div className={styles.subIntro}>
 							<p>
 								As a tech enthusiast and software engineer, my passion lies in leveraging cutting-edge technology to create solutions that positively
@@ -89,157 +86,242 @@ const IndexPage = () => {
 				</div>
 			</div>
 			<div className={styles.section2}>
-				<h2 className={styles.title}>Work Experience</h2>
-				<div className={styles.workWrapper}>
-					<div className={styles.technologyWrapper}>
-						<div>
-							<h3>Core Technologies</h3>
-							<ul>
-								<li>
-									<span className={styles.heading}>Programming Languages:</span>
-									<span>JavaScript, TypeScript, Java </span>
-								</li>
-								<li>
-									<span className={styles.heading}>Web Frameworks:</span>
-									<span>ReactJs, Angular.js, jQuery</span>
-								</li>
-								<li>
-									<span className={styles.heading}>Databases:</span>
-									<span> Postgres, MySQL, MongoDB, Oracle</span>
-								</li>
-								<li>
-									<span className={styles.heading}>Cloud:</span>
-									<span>Google Cloud Platform - Kubernetes, Compute Engine, Cloud Functions, Cloud Run etc.</span>
-								</li>
-								<li>
-									<span className={styles.heading}>Tools & Technologies:</span>
-									<span>Kafka, Docker, CircleCI, Harness, Jenkins, Github, VSCode </span>
-								</li>
-								<li>
-									<span className={styles.heading}>Testing:</span>
-									<span>Jasmine, Karma, Cypress, React Testing library, jUnit</span>
-								</li>
-							</ul>
-							<button to="www.linkedin.com" className={`${btn} ${btnPrimary} ${btnSm} `}>
-								View On LinkedIn
-							</button>
+				<div className={styles.workSection}>
+					<div className={styles.title}>
+						<h2>Work Experience</h2>
+					</div>
+					<div className={styles.workWrapper}>
+						<div className={styles.technologyWrapper}>
+							<div>
+								<h3>Core Technologies</h3>
+								<ul>
+									<li>
+										<span className={styles.heading}>Programming Languages:</span>
+										<span>JavaScript, TypeScript, Java </span>
+									</li>
+									<li>
+										<span className={styles.heading}>Web Frameworks:</span>
+										<span>ReactJs, Angular.js, jQuery</span>
+									</li>
+									<li>
+										<span className={styles.heading}>Databases:</span>
+										<span> Postgres, MySQL, MongoDB, Oracle</span>
+									</li>
+									<li>
+										<span className={styles.heading}>Cloud:</span>
+										<span>Google Cloud Platform - Kubernetes, Compute Engine, Cloud Functions, Cloud Run etc.</span>
+									</li>
+									<li>
+										<span className={styles.heading}>Tools & Technologies:</span>
+										<span>Kafka, Docker, CircleCI, Harness, Jenkins, Github, VSCode </span>
+									</li>
+									<li>
+										<span className={styles.heading}>Testing:</span>
+										<span>Jasmine, Karma, Cypress, React Testing library, jUnit</span>
+									</li>
+								</ul>
+								<div className={styles.linkedInButtonContainer}>
+									<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className={`${linkBtn} ${btnSecondary} ${btnSm} `}>
+										View On LinkedIn
+									</a>
+								</div>
+							</div>
+						</div>
+						<div className={styles.timelineWrapper}>
+							<Timeline
+								sx={{
+									[`& .${timelineOppositeContentClasses.root}`]: {
+										flex: 0.2,
+									},
+								}}
+							>
+								<TimelineItem>
+									<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+										<h4>2022</h4>
+									</TimelineOppositeContent>
+									<TimelineSeparator>
+										<TimelineConnector sx={{ height: '20px' }} />
+										<TimelineDot sx={{ borderWidth: '10px' }}>
+											<img src={cvsImg} width={30} alt="cvs logo" />
+										</TimelineDot>
+										<TimelineConnector sx={{ height: '20px' }} />
+									</TimelineSeparator>
+									<TimelineContent sx={{ py: '12px', px: 2 }}>
+										<h3>CVS Health</h3>
+										<h4>Software Engineer</h4>
+										<span className={styles.timerange}>Oct 2022 - Present</span>
+									</TimelineContent>
+								</TimelineItem>
+								<TimelineItem>
+									<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+										<h4>2020</h4>
+									</TimelineOppositeContent>
+									<TimelineSeparator>
+										<TimelineConnector sx={{ height: '20px' }} />
+										<TimelineDot sx={{ borderWidth: '10px' }}>
+											<img src={tausightImg} width={30} alt="cvs health logo" />
+										</TimelineDot>
+										<TimelineConnector sx={{ height: '20px' }} />
+									</TimelineSeparator>
+									<TimelineContent sx={{ py: '12px', px: 2 }}>
+										<h3>Tausight</h3>
+										<h4>User Interface Engineer</h4>
+										<span className={styles.timerange}>Oct 2020 - Sept 2022</span>
+									</TimelineContent>
+								</TimelineItem>
+								<TimelineItem>
+									<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+										<h4>2019</h4>
+									</TimelineOppositeContent>
+									<TimelineSeparator>
+										<TimelineConnector sx={{ height: '20px' }} />
+										<TimelineDot sx={{ borderWidth: '10px' }}>
+											<img src={sdiImg} width={30} alt="tausight logo" />
+										</TimelineDot>
+										<TimelineConnector sx={{ height: '20px' }} />
+									</TimelineSeparator>
+									<TimelineContent sx={{ py: '12px', px: 2 }}>
+										<h3>SDI Global Services</h3>
+										<h4>Software Developer</h4>
+										<span className={styles.timerange}>2019 - 2020</span>
+									</TimelineContent>
+								</TimelineItem>
+								<TimelineItem>
+									<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+										<h4>2017</h4>
+									</TimelineOppositeContent>
+									<TimelineSeparator>
+										<TimelineConnector sx={{ height: '20px' }} />
+										<TimelineDot sx={{ borderWidth: '10px' }}>
+											<img src={sdiImg} width={30} alt="sdi global services logo" />
+										</TimelineDot>
+										<TimelineConnector sx={{ height: '20px' }} />
+									</TimelineSeparator>
+									<TimelineContent sx={{ py: '12px', px: 2 }}>
+										<h3>SDI Global Services</h3>
+										<h4>Software Developer</h4>
+										<span className={styles.timerange}>2017 - 2018</span>
+									</TimelineContent>
+								</TimelineItem>
+								<TimelineItem>
+									<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+										<h4>2016</h4>
+									</TimelineOppositeContent>
+									<TimelineSeparator>
+										<TimelineConnector sx={{ height: '20px' }} />
+										<TimelineDot sx={{ borderWidth: '10px' }}>
+											<img src={tbsmoImg} width={30} alt="sdi global services logo" />
+										</TimelineDot>
+										<TimelineConnector sx={{ height: '20px' }} />
+									</TimelineSeparator>
+									<TimelineContent sx={{ py: '12px', px: 2 }}>
+										<h3>Today's Business</h3>
+										<h4>Web Development Intern</h4>
+										<span className={styles.timerange}>Aug 2016 - Dec 2016</span>
+									</TimelineContent>
+								</TimelineItem>
+								<TimelineItem>
+									<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+										<h4>2015</h4>
+									</TimelineOppositeContent>
+									<TimelineSeparator>
+										<TimelineConnector sx={{ height: '20px' }} />
+										<TimelineDot sx={{ borderWidth: '10px' }}>
+											<img src={fduImg} width={30} alt="today's business logo" />
+										</TimelineDot>
+									</TimelineSeparator>
+									<TimelineContent sx={{ py: '12px', px: 2 }}>
+										<h3>Fairleigh Dickinson University</h3>
+
+										<h4>Student Orientation Leader</h4>
+										<span className={styles.timerange}>Aug 2016 - Sept 2016</span>
+									</TimelineContent>
+								</TimelineItem>
+							</Timeline>
 						</div>
 					</div>
-					<div className={styles.timelineWrapper}>
-						<Timeline
-							sx={{
-								[`& .${timelineOppositeContentClasses.root}`]: {
-									flex: 0.2,
-								},
-							}}
-						>
-							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
-									<h4>2022</h4>
-								</TimelineOppositeContent>
-								<TimelineSeparator>
-									<TimelineConnector sx={{ height: '20px' }} />
-									<TimelineDot sx={{ borderWidth: '10px' }}>
-										<img src={cvsImg} width={30} />
-									</TimelineDot>
-									<TimelineConnector sx={{ height: '20px' }} />
-								</TimelineSeparator>
-								<TimelineContent sx={{ py: '12px', px: 2 }}>
-									<h3>CVS Health</h3>
-									<h4>Software Engineer</h4>
-									<span className={styles.timerange}>Oct 2022 - Present</span>
-								</TimelineContent>
-							</TimelineItem>
-							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
-									<h4>2020</h4>
-								</TimelineOppositeContent>
-								<TimelineSeparator>
-									<TimelineConnector sx={{ height: '20px' }} />
-									<TimelineDot sx={{ borderWidth: '10px' }}>
-										<img src={tausightImg} width={30} />
-									</TimelineDot>
-									<TimelineConnector sx={{ height: '20px' }} />
-								</TimelineSeparator>
-								<TimelineContent sx={{ py: '12px', px: 2 }}>
-									<h3>Tausight</h3>
-									<h4>User Interface Engineer</h4>
-									<span className={styles.timerange}>Oct 2020 - Sept 2022</span>
-								</TimelineContent>
-							</TimelineItem>
-							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
-									<h4>2019</h4>
-								</TimelineOppositeContent>
-								<TimelineSeparator>
-									<TimelineConnector sx={{ height: '20px' }} />
-									<TimelineDot sx={{ borderWidth: '10px' }}>
-										<img src={sdiImg} width={30} />
-									</TimelineDot>
-									<TimelineConnector sx={{ height: '20px' }} />
-								</TimelineSeparator>
-								<TimelineContent sx={{ py: '12px', px: 2 }}>
-									<h3>SDI Global Services</h3>
-									<h4>Software Developer</h4>
-									<span className={styles.timerange}>2019 - 2020</span>
-								</TimelineContent>
-							</TimelineItem>
-							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
-									<h4>2017</h4>
-								</TimelineOppositeContent>
-								<TimelineSeparator>
-									<TimelineConnector sx={{ height: '20px' }} />
-									<TimelineDot sx={{ borderWidth: '10px' }}>
-										<img src={sdiImg} width={30} />
-									</TimelineDot>
-									<TimelineConnector sx={{ height: '20px' }} />
-								</TimelineSeparator>
-								<TimelineContent sx={{ py: '12px', px: 2 }}>
-									<h3>SDI Global Services</h3>
-									<h4>Software Developer</h4>
-									<span className={styles.timerange}>2017 - 2018</span>
-								</TimelineContent>
-							</TimelineItem>
-							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
-									<h4>2016</h4>
-								</TimelineOppositeContent>
-								<TimelineSeparator>
-									<TimelineConnector sx={{ height: '20px' }} />
-									<TimelineDot sx={{ borderWidth: '10px' }}>
-										<img src={tbsmoImg} width={30} />
-									</TimelineDot>
-									<TimelineConnector sx={{ height: '20px' }} />
-								</TimelineSeparator>
-								<TimelineContent sx={{ py: '12px', px: 2 }}>
-									<h3>Today's Business</h3>
-									<h4>Web Development Intern</h4>
-									<span className={styles.timerange}>Aug 2016 - Dec 2016</span>
-								</TimelineContent>
-							</TimelineItem>
-							<TimelineItem>
-								<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
-									<h4>2015</h4>
-								</TimelineOppositeContent>
-								<TimelineSeparator>
-									<TimelineConnector sx={{ height: '20px' }} />
-									<TimelineDot sx={{ borderWidth: '10px' }}>
-										<img src={fduImg} width={30} />
-									</TimelineDot>
-								</TimelineSeparator>
-								<TimelineContent sx={{ py: '12px', px: 2 }}>
-									<h3>Fairleigh Dickinson University</h3>
-
-									<h4>Student Orientation Leader</h4>
-									<span className={styles.timerange}>Aug 2016 - Sept 2016</span>
-								</TimelineContent>
-							</TimelineItem>
-						</Timeline>
+				</div>
+				<div className={styles.educationSection}>
+					<div className={styles.title}>
+						<h2>Education</h2>
+					</div>
+					<div className={styles.workWrapper}>
+						<div className={styles.technologyWrapper}>
+							<div>
+								<ul>
+									<li>
+										<div>
+											<span className={styles.heading}>Master's Courses</span>
+										</div>
+										<span>
+											Software Engineering, Mobile Application Development, System Programming, Computer Architecture , Operating Systems, Java and
+											the Internet, Assembly Language, Database Systems, Local Area Networks, and Unix shall Programming
+										</span>
+									</li>
+									<li>
+										<div>
+											<span className={styles.heading}>Bachelors Courses</span>
+										</div>
+										<span>
+											Object Oriented Programming with C++, Computer Networks, Cyber Security, Analysis and Design of Algorithem,Advanced JAVA, Web
+											Technologies, Distributed Operating Systems, Mobile Computing and Wireless Communication, Android Programming, System
+											Programming, Computer Grapics, Computer Programming and Utilization, Data Structures, Database Managment Systems, Web data
+											managment etc.
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div className={styles.timelineWrapper}>
+							<Timeline
+								sx={{
+									[`& .${timelineOppositeContentClasses.root}`]: {
+										flex: 0.2,
+									},
+								}}
+							>
+								<TimelineItem>
+									<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+										<h4>2015</h4>
+									</TimelineOppositeContent>
+									<TimelineSeparator>
+										<TimelineConnector sx={{ height: '20px' }} />
+										<TimelineDot sx={{ borderWidth: '10px' }}>
+											<img src={fduImg} width={30} alt="fdu logo" />
+										</TimelineDot>
+										<TimelineConnector sx={{ height: '20px' }} />
+									</TimelineSeparator>
+									<TimelineContent sx={{ py: '12px', px: 2 }}>
+										<h3>Fairleigh Dickinson University</h3>
+										<h4>Master of Science (M.S) in Computer Science</h4>
+										<h4> GPA - 3.94 / 4.0 </h4>
+										<span className={styles.timerange}>Sept 2015 - March 2017</span>
+									</TimelineContent>
+								</TimelineItem>
+								<TimelineItem>
+									<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+										<h4>2010</h4>
+									</TimelineOppositeContent>
+									<TimelineSeparator>
+										<TimelineConnector sx={{ height: '20px' }} />
+										<TimelineDot sx={{ borderWidth: '10px' }}>
+											<img src={gtuImg} width={30} alt="fdu logo" />
+										</TimelineDot>
+										<TimelineConnector sx={{ height: '20px' }} />
+									</TimelineSeparator>
+									<TimelineContent sx={{ py: '12px', px: 2 }}>
+										<h3>Gujarat Techlogical University</h3>
+										<h4>Bachelors of Engineering (B.E) in Information Technology </h4>
+										<span className={styles.timerange}>Sept 2015 - March 2017</span>
+									</TimelineContent>
+								</TimelineItem>
+							</Timeline>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div className={`${styles.section3}`}>
+
+			<div className={`${styles.section4}`}>
 				<div className={styles.contactCard}>
 					<h3 className={styles.contactFormHeading} id="contact-me">
 						Contact me

@@ -26,6 +26,13 @@
   color: var(--white);
 }
 
+.btn-secondary {
+  background-color: var(--dark-sky);
+  color: var(--white);
+}
+
+
+
 .buttonGroup {
   display: flex;
   align-items: center;
