@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import { Nav, navLinks, Logo, Underline, mobileNav, visible, hidden , closeIcon} from "./styles/Navbar.module.css"
-import { Large } from "./styles/Container.module.css"
+import { large } from "./styles/Container.module.css"
 import logo from "../assets/images/brand.png"
 import mobileLogo from "../assets/images/mobile-logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -8,12 +8,14 @@ import { faBars, faWindowClose } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 
 
-const Header = props => {
+const Header = ({title}) => {
    const [isMenuVisible, setIsMenuVisible] = useState(true);
 
   return (
+    <>
+    <header>{title}</header>
     <nav className={ Nav }>
-      <div className={ Large }>
+      <div className={ large }>
         <div className={ navLinks}>
           <Link to="#">
             <img src={logo} width="60px" className={Logo} alt="Jay Jariwala portfolio logo"/>
@@ -62,6 +64,7 @@ const Header = props => {
         </div>
       </div>
     </nav>
+    </>
   )
 }
 

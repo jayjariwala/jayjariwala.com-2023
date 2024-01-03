@@ -4,7 +4,7 @@
 const path = require('path');
 module.exports = {
 	siteMetadata: {
-		title: `jayjariwala.com-2023`,
+		title: `Jay Jariwala Portfolio`,
 		siteUrl: `https://www.yourdomain.tld`,
 	},
 	plugins: [

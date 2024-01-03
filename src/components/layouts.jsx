@@ -7,15 +7,11 @@ import Footer from './Footer';
 export const Layout = ({ pageTitle, children }) => {
 	return (
 		<div className={layout}>
-
 			<nav>
 				<Header />
 			</nav>
-			<main>
-				{children}
-			</main>
+			<main>{children}</main>
 			<Footer />
-
-		 </div>
+		</div>
 	);
 };

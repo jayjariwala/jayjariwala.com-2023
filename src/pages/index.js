@@ -14,15 +14,27 @@ import sdiImg from 'assets/images/sdi_logo.webp';
 import tausightImg from 'assets/images/tausight_logo.jpeg';
 import gtuImg from 'assets/images/gtuLogo.jpeg';
 import tbsmoImg from 'assets/images/tbsmo_logo.jpeg';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import Seo from 'components/seo';
 
 const IndexPage = () => {
+	const data = useStaticQuery(graphql`
+		query {
+			site {
+				siteMetadata {
+					title
+				}
+			}
+		}
+	`);
+
+	console.log('data', data);
 	return (
 		<Layout>
 			<div className={styles.hero}>
@@ -343,6 +355,6 @@ const IndexPage = () => {
 	);
 };
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <Seo title="Home" />;
 
 export default IndexPage;
