@@ -14,6 +14,12 @@ module.exports = {
 				srcPath: path.resolve(__dirname, 'src'),
 			},
 		},
+		{
+			resolve: 'gatsby-plugin-manifest',
+			options: {
+				icon: 'src/assets/images/brand.jpg',
+			},
+		},
 		'gatsby-plugin-postcss',
 		'gatsby-plugin-material-ui',
 	],

@@ -22,14 +22,15 @@
 		"@mui/lab": "^5.0.0-alpha.155",
 		"@mui/material": "^5.14.20",
 		"gatsby": "^5.13.1",
+		"gatsby-plugin-image": "^3.13.0",
+		"gatsby-plugin-manifest": "^5.13.0",
 		"gatsby-plugin-material-ui": "^4.0.2",
 		"gatsby-plugin-postcss": "^6.12.0",
 		"gatsby-plugin-resolve-src": "^2.1.0",
-		"postcss": "^8.4.31",
-		"gatsby-plugin-image": "^3.13.0",
 		"gatsby-plugin-sharp": "^5.13.0",
 		"gatsby-source-filesystem": "^5.13.0",
 		"gatsby-transformer-sharp": "^5.13.0",
+		"postcss": "^8.4.31",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	}

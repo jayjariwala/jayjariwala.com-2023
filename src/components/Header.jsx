@@ -12,8 +12,7 @@ const Header = ({title}) => {
    const [isMenuVisible, setIsMenuVisible] = useState(true);
 
   return (
-    <>
-    <header>{title}</header>
+
     <nav className={ Nav }>
       <div className={ large }>
         <div className={ navLinks}>
@@ -64,7 +63,7 @@ const Header = ({title}) => {
         </div>
       </div>
     </nav>
-    </>
+
   )
 }
 

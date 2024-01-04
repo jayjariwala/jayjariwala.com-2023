@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import logo from "../assets/images/brand.png"
 
-const Seo = ({ title }) => {
-	return <title>{title} | Jay Jariwala Portfolio</title>;
-};
+const Seo = ({ title }) => <title>{title} | Jay Jariwala Portfolio</title>
 
 export default Seo;
