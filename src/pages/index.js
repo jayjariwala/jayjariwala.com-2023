@@ -22,6 +22,7 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Seo from 'components/seo';
+import { faGit } from '@fortawesome/free-brands-svg-icons';
 
 const IndexPage = () => {
 	const data = useStaticQuery(graphql`
@@ -34,7 +35,6 @@ const IndexPage = () => {
 		}
 	`);
 
-	console.log('data', data);
 	return (
 		<Layout>
 			<div className={styles.hero}>
