@@ -16,6 +16,10 @@
   margin: 10px;
 }
 
+.iconContainer a {
+  color: white;
+}
+
 .copyright {
   margin-top:5px;
   display: block;
