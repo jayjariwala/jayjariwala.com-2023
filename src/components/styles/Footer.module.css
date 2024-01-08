@@ -1,6 +1,22 @@
 .footer {
   padding: 30px;
+  margin-top: 40px;
   background-color: var(--squirtle);
   color: var(--white);
   text-align: center;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconContainer svg {
+  margin: 10px;
+}
+
+.copyright {
+  margin-top:5px;
+  display: block;
 }
